@@ -1,0 +1,22 @@
+services:
+  expense_tracker_db:
+    image: et-db
+    container_name: expense_tracker_db
+    ports:
+      - "27018" : "27017"
+    networks:
+      - backend
+
+  expense_tracker_app:
+    image:
+    ports:
+      - "8081": "9070"
+    depends_on:
+      - expense_tracker_db
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: backend
+    driver: bridge

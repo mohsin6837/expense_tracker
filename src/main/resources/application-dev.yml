@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: expense_tracker
+  data:
+    mongodb:
+      uri: mongodb://et-db:27017/expense_tracker
+
+server:
+  port: 9070
+
+com:
+  dev:
+    expense_tracker:
+      jwt:
+        key: Syed#3220799
